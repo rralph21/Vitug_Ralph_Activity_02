@@ -9,7 +9,7 @@ This activity will help to reinforce learning of the Module 2 concepts of:
 
 ## Author
 
-[Your name]
+Ralph Vitug
 
 ## Additional Information
 
