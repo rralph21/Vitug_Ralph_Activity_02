@@ -41,10 +41,10 @@ class Rectangle(Shape):
     def __str__(self) -> str:
 
         return (
-                super().__str__() + f"The shape color is {color}."
+                super().__str__() + f"The shape color is {self._color}."
                 + f"\nThis triangle has four sides with" 
-                + f"the lengths of {length}, {width}, {length}"
-                + f"and {width} centimeters")
+                + f"the lengths of {self.__length}, {self.__width}, {self.__length}"
+                + f"and {self.__width} centimeters")
         
 
     
