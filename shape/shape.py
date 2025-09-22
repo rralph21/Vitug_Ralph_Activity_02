@@ -16,7 +16,7 @@ class Shape(ABC):
 
     """
 
-    def __init__(self, color: str)
+    def __init__(self, color: str):
         
         if len(color.strip()) == 0:
             raise ValueError("Color cannot be blank")
@@ -24,3 +24,13 @@ class Shape(ABC):
         else:
             self._color = color
         
+
+    @property
+    def color(self) -> str:
+        return self._color
+    
+
+    def __str__(self) -> str:
+
+        return (f"The shape color is {self._color}.")
+    
