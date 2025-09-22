@@ -26,7 +26,8 @@ class Triangle(Shape):
 
     """
 
-    def __init__(self, side_1: int, side_2: int, side_3: int):
+    def __init__(self, side_1: int, side_2: int, side_3: int,
+                 calculate_area: float, calculate_perimeter: float):
 
         super().__init__(color=str)
 
@@ -47,11 +48,18 @@ class Triangle(Shape):
         
         else:
             raise ValueError("Side 3 must be a numeric type")
+
+    def calculate_area(self) -> float:
+
+        sp = ((self.__side_1 + self.__side_2 + self.__side_3) /2)
+        area = ((sp * (sp - self.__side_1), sp * (sp - self.__side_2), sp * (sp - self.__side_3)) / sp)
+
+        self.calculate_area = area
         
 
     def __str__(self) -> str:
         return (
-                super().__str__() + f"The shape color is {color}."
+                super().__str__() + f"The shape color is {self._color}."
                 + f"\nThis triangle has three sides with" 
-                + f"the lengths of {side_1}, {side_2} and {side_3}"
+                + f"the lengths of {self.__side_1}, {self.__side_2} and {self.__side_3}"
                 + f"centimeters")
