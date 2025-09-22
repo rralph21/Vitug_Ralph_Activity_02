@@ -23,6 +23,10 @@ class Triangle(Shape):
         side_1: ValueError is raised if non numeric
         side_2: ValueError is raised if non numeric
         side_3: ValueError is raised if non numeric
+        calculate_area: ValueError is raised if TIT 
+        is not satisfied.
+        calculate_perimeter: ValueError is raised if TIT
+        is not satisfied.
 
     """
 
@@ -48,6 +52,21 @@ class Triangle(Shape):
         
         else:
             raise ValueError("Side 3 must be a numeric type")
+        
+        if isinstance(calculate_area, float):
+            self.__calculate_area = calculate_area
+
+        else:
+            raise ValueError("The sides did not satisfy the Triangular" +
+            "Inequality Theorem")
+        
+        if isinstance(calculate_perimeter, float):
+            self.__calculate_perimeter = calculate_perimeter
+        
+        else:
+            raise ValueError("The sides did not satisfy the Triangular" +
+                             " Inequality Theorem")
+        
 
     def calculate_area(self) -> float:
 
