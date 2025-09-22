@@ -38,5 +38,13 @@ class Rectangle(Shape):
         else:
             raise ValueError("Width must be numeric")
         
+    def __str__(self) -> str:
+
+        return (
+                super().__str__() + f"The shape color is {color}."
+                + f"\nThis triangle has four sides with" 
+                + f"the lengths of {length}, {width}, {length}"
+                + f"and {width} centimeters")
+        
 
     
