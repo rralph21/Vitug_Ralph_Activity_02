@@ -48,3 +48,10 @@ class Triangle(Shape):
         else:
             raise ValueError("Side 3 must be a numeric type")
         
+
+    def __str__(self) -> str:
+        return (
+                super().__str__() + f"The shape color is {color}."
+                + f"\nThis triangle has three sides with" 
+                + f"the lengths of {side_1}, {side_2} and {side_3}"
+                + f"centimeters")
