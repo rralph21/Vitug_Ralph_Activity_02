@@ -16,6 +16,10 @@ class Rectangle(Shape):
         sides of the Rectangle in centimeters.
         width (int): Represents the width of two opposing sides
         of the Rectangle in centimeters.
+
+    raises:
+        length: ValueError is raised if non numeric
+        width: ValueError is raised if non numeric
     """
 
     def __init__(self, length: int, width: int):
@@ -34,5 +38,5 @@ class Rectangle(Shape):
         else:
             raise ValueError("Width must be numeric")
         
-        
+
     
