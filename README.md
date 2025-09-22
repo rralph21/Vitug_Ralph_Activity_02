@@ -13,4 +13,4 @@ Ralph Vitug
 
 ## Additional Information
 
-[ Use this space to include additional information that may help in your learning. ]
+This activity will demonstration our understanding on abstraction, inheritance, polymorphism and package initialization.
