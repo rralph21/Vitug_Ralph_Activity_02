@@ -10,3 +10,14 @@ __author__ = ""
 __version__ = ""
 
 import unittest
+from shape import *
+
+
+class TestTriangle(unittest.TestCase):
+
+    def setUp(self):
+        self.triangle = Triangle("red", 7, 8, 9)
+
+        
+
+
