@@ -42,7 +42,7 @@ class Rectangle(Shape):
 
         return (
                 super().__str__() + f"The shape color is {self._color}."
-                + f"\nThis triangle has four sides with" 
+                + "\nThis triangle has four sides with" 
                 + f"the lengths of {self.__length}, {self.__width}, {self.__length}"
                 + f"and {self.__width} centimeters")
         
