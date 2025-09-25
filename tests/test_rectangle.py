@@ -18,6 +18,8 @@ class TestTriangle(unittest.TestCase):
     def setUp(self):
         self.triangle = Triangle("red", 7, 8, 9)
 
+    def test_init_valid_attributes(self):
+        self.assertEqual(self.triangle.color, "red")
+        self.assertEqual(self.triangle.calculate_perimeter(), 24)
         
-
 

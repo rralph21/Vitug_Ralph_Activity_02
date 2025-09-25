@@ -4,7 +4,7 @@ __author__ = "Ralph Vitug"
 __version__ = "2.0.0"
 
 from shape import Shape
-from triangle import Triangle
+
 
 class Rectangle(Shape):
     """

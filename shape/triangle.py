@@ -73,5 +73,5 @@ class Triangle(Shape):
         return (
                 super().__str__() 
                 + "\nThis triangle has three sides with" 
-                + f"the lengths of {self.__side_1}, {self.__side_2} and {self.__side_3}"
+                + f" the lengths of {self.__side_1}, {self.__side_2} and {self.__side_3} "
                 + "centimeters")
