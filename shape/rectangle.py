@@ -3,8 +3,8 @@
 __author__ = "Ralph Vitug"
 __version__ = "2.0.0"
 
-from shape.shape import Shape
-from shape.triangle import Triangle
+from shape import Shape
+from triangle import Triangle
 
 class Rectangle(Shape):
     """
@@ -22,9 +22,9 @@ class Rectangle(Shape):
         width: ValueError is raised if non numeric
     """
 
-    def __init__(self, length: int, width: int):
+    def __init__(self, color: str, length: int, width: int):
 
-        super().__init__(color=str)
+        super().__init__(color)
 
         if isinstance(length, int):
             self.__length = length
@@ -38,13 +38,19 @@ class Rectangle(Shape):
         else:
             raise ValueError("Width must be numeric")
         
+    def calculate_area(self):
+        return self.__length * self.__width
+    
+    def calculate_perimeter(self):
+        return (self.__length * 2) + (self.__width * 2)
+        
     def __str__(self) -> str:
 
         return (
-                super().__str__() + f"The shape color is {self._color}."
-                + "\nThis triangle has four sides with" 
+                super().__str__() 
+                + "\nThis rectangle has four sides with " 
                 + f"the lengths of {self.__length}, {self.__width}, {self.__length}"
-                + f"and {self.__width} centimeters")
+                + f" and {self.__width} centimeters")
         
 
-    
+
