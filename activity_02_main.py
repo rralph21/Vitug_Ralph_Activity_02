@@ -6,6 +6,8 @@ __author__ = "ACE Faculty"
 __version__ = "1.0.0"
 __credits__ = ""
 
+from shape import *
+
 def main():
     """Test the functionality of the methods encapsulated 
     in this project.
@@ -19,12 +21,13 @@ def main():
     print("*************PART 1****************")
 
     # 1. Create an empty list of Shape objects.
-
+    shapes = []
 
     # 2. Code a statement which creates an instance of the Triangle 
     # class.
     # Append the Triangle to the list of shapes.
-
+    triangle_1 = Triangle("red", 3,4,5)
+    shapes.append(triangle_1)
 
     # 3. Code a statement which creates an instance of the Rectangle 
     # class.
