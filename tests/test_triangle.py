@@ -14,9 +14,11 @@ from shape import *
 
 
 class TestTriangle(unittest.TestCase):
-
     def setUp(self):
         self.triangle = Triangle("red", 3, 4, 5)
+        # setUp is arrange.
+        # it will be used in each test to reduce
+        # redundancy
 
     def test_init_valid(self):
         # Assert and Act
@@ -26,40 +28,46 @@ class TestTriangle(unittest.TestCase):
         self.assertEqual(5, self.triangle._Triangle__side_3)
 
     def test_init_blank_color_raises_exception(self):
+        # Assert and Act
         with self.assertRaises(ValueError):
             Triangle(" ", 3, 4, 5)
 
     def test_init_side1_invalid_raises_exception(self):
+        # Assert and Act
         with self.assertRaises(ValueError):
             Triangle("red", "a", 4, 5)
 
     def test_init_side2_invalid_raises_exception(self):
+        # Assert and Act
         with self.assertRaises(ValueError):
             Triangle("red", 3, "b", 5)
 
     def test_init_side3_invalid_raises_exception(self):
+        # Assert and Act
         with self.assertRaises(ValueError):
             Triangle("red", 3, 4, "c")
 
     def test_init_invalid_triangle_fails_TIT(self):
-       
+       # Assert and Act
         with self.assertRaises(ValueError):
             Triangle("red", 1, 2, 3)
 
     def test_area_valid(self):
-        # (3 + 4 + 5) / 2 = 6
+        # Assert and Act
         self.assertEqual(6, self.triangle.calculate_area())
 
     def test_perimeter_valid(self):
-        # 3 + 4 + 5 = 12
+        # Assert and Act
         self.assertEqual(12, self.triangle.calculate_perimeter())
 
     def test_str_method(self):
+        # Arrange
         expected = (
             "The shape color is red.\n"
             "This triangle has three sides with the lengths of "
             "3, 4 and 5 centimeters"
         )
+        # Assert and Act
         self.assertEqual(str(self.triangle), expected)
 
 
