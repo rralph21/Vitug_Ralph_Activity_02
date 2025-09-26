@@ -13,4 +13,15 @@ Ralph Vitug
 
 ## Additional Information
 
-This activity will demonstration our understanding on abstraction, inheritance, polymorphism and package initialization.
+This project demonstrates the use of object-oriented programming concepts in Python, specifically focusing on abstract classes, inheritance, and polymorphism.  
+The activity includes the implementation of Shape, Triangle, and Rectangle classes, along with unit tests for validation.
+
+Abstraction (ABC) 
+   The Shape class was defined as an abstract with methods calculate_area and calculate_perimeter.
+
+Inheritance  
+    Both Triangle and Rectangle inherit from Shape
+
+Polymorphism
+    Both Triangle and Rectangle shared the same methods but each shape had their own function.
+
